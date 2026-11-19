@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>World War II - The Archive</title>
 <meta name="description" content="World War II: the deadliest conflict in human history. From The Archive, the free encyclopedia.">
+<link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 60 60%27%3E%3Ccircle cx=%2730%27 cy=%2730%27 r=%2726%27 fill=%27none%27 stroke=%27%23222%27 stroke-width=%274%27/%3E%3Cellipse cx=%2730%27 cy=%2730%27 rx=%2711%27 ry=%2726%27 fill=%27none%27 stroke=%27%23222%27 stroke-width=%273%27/%3E%3Cpath d=%27M4 30H56%27 stroke=%27%23222%27 stroke-width=%273%27/%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 <!--
   Thank you for viewing the source.
@@ -16,6 +17,7 @@
 <div id="grain" aria-hidden="true"></div>
 <div id="vignette" aria-hidden="true"></div>
 <div id="whisper" aria-live="polite"></div>
+<svg id="other-cursor" viewBox="0 0 16 24" aria-hidden="true"><path d="M1 1 L1 19 L5.5 14.8 L8.6 22 L11.4 20.8 L8.4 13.8 L14.5 13.6 Z" fill="#000" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg>
 
 <header class="topbar">
   <a class="brand" href="#top" aria-label="The Archive home">
@@ -35,6 +37,7 @@
   <form class="search" role="search" onsubmit="return false">
     <input id="search" type="search" placeholder="Search The Archive" aria-label="Search The Archive" data-swap="mid" data-ph="They are searching too">
     <button type="submit">Search</button>
+    <ul class="suggest" id="suggest" role="listbox" hidden></ul>
   </form>
   <nav class="userlinks">
     <a href="#top">Donate</a>
@@ -105,54 +108,15 @@
       <caption id="ib-cap" data-swap="after" data-html="The Reader">World War II</caption>
       <tbody>
         <tr><td colspan="2" class="ib-image">
-          <svg viewBox="0 0 300 220" class="collage" role="img" aria-label="Collage of wartime scenes">
-            <defs>
-              <filter id="sepia-grain" x="0" y="0" width="100%" height="100%">
-                <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" result="n"/>
-                <feColorMatrix in="n" type="matrix" values="0 0 0 0 .3  0 0 0 0 .25  0 0 0 0 .18  0 0 0 .22 0" result="g"/>
-                <feComposite in="g" in2="SourceGraphic" operator="in" result="gg"/>
-                <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="gg"/></feMerge>
-              </filter>
-              <filter id="soft"><feGaussianBlur stdDeviation="1.4"/></filter>
-            </defs>
-            <g filter="url(#sepia-grain)">
-              <!-- panel 1 : bombers -->
-              <rect x="0" y="0" width="148" height="108" fill="#cfc2a6"/>
-              <g fill="#3b342b">
-                <path d="M30 40 l30 -4 l4 -6 l3 6 l22 -2 l-22 6 l-3 6 l-4 -5 z"/>
-                <path d="M70 66 l26 -3 l3 -5 l3 5 l19 -2 l-19 5 l-3 5 l-3 -4 z"/>
-                <path d="M100 28 l18 -2 l2 -4 l2 4 l13 -1 l-13 3 l-2 4 l-2 -3 z"/>
-              </g>
-              <!-- panel 2 : convoy -->
-              <rect x="152" y="0" width="148" height="108" fill="#bfb6a0"/>
-              <rect x="152" y="64" width="148" height="44" fill="#8f8873"/>
-              <g fill="#2e2a24">
-                <path d="M170 66 h46 l-6 9 h-34 z"/><rect x="186" y="56" width="8" height="10"/><rect x="198" y="59" width="4" height="7"/>
-                <path d="M238 70 h40 l-5 7 h-30 z"/><rect x="252" y="62" width="7" height="8"/>
-              </g>
-              <path d="M152 80 q12 -3 24 0 t24 0 t24 0 t24 0 t24 0 t24 0" stroke="#a49d86" fill="none"/>
-              <!-- panel 3 : ruined city -->
-              <rect x="0" y="112" width="148" height="108" fill="#c8bca3"/>
-              <path d="M0 220 V176 h14 v-22 l6 -6 v28 h12 v-40 h10 l3 12 v28 h14 v-18 l8 -10 v28 h16 v-34 h12 v22 l6 -8 v20 h18 v-12 h12 v40 z" fill="#4a4237"/>
-              <rect x="26" y="160" width="3" height="4" fill="#c8bca3"/><rect x="88" y="168" width="3" height="4" fill="#c8bca3"/>
-              <!-- panel 4 : infantry -->
-              <rect x="152" y="112" width="148" height="108" fill="#cbbfa5"/>
-              <rect x="152" y="182" width="148" height="38" fill="#a59a80"/>
-              <g fill="#3a332a" id="p4-men">
-                <g transform="translate(170 150)"><circle cx="6" cy="6" r="5"/><rect x="0" y="12" width="12" height="28" rx="4"/></g>
-                <g transform="translate(192 148)"><circle cx="6" cy="6" r="5"/><rect x="0" y="12" width="12" height="30" rx="4"/></g>
-                <g transform="translate(214 151)"><circle cx="6" cy="6" r="5"/><rect x="0" y="12" width="12" height="27" rx="4"/></g>
-                <g transform="translate(236 149)"><circle cx="6" cy="6" r="5"/><rect x="0" y="12" width="12" height="29" rx="4"/></g>
-                <g transform="translate(258 150)"><circle cx="6" cy="6" r="5"/><rect x="0" y="12" width="12" height="28" rx="4"/></g>
-              </g>
-              <g id="p4-near" class="p4-near" data-swap="after" data-cls="shown" filter="url(#soft)" fill="#1d1813">
-                <circle cx="226" cy="168" r="17"/><rect x="200" y="186" width="52" height="40" rx="14"/>
-              </g>
-            </g>
-            <rect x="148" y="0" width="4" height="220" fill="#f8f9fa" class="gutter"/>
-            <rect x="0" y="108" width="300" height="4" fill="#f8f9fa" class="gutter"/>
-          </svg>
-          <div class="ib-caption" id="ib-caption" data-swap="after" data-html="Clockwise from top left: the sky above you; a sea of names; the room you are sitting in; infantry in Normandy, 1944. They are closer now.">Clockwise from top left: bombers over Germany, 1943; an Atlantic convoy; ruins of a European city, 1945; infantry in Normandy, 1944</div>
+          <div id="ib-photo" data-swap="after">
+            <div class="collage">
+              <img src="img/b17.jpg" alt="B-17 bombers in formation leaving contrails" width="320" height="240">
+              <img src="img/convoy.jpg" alt="Merchant ships of an Atlantic convoy at sea" width="320" height="240">
+              <img src="img/ruins.jpg" alt="The ruined centre of Nuremberg, 1945" width="320" height="240">
+              <img src="img/landing.jpg" alt="Canadian infantry coming ashore in Normandy, 1944" width="320" height="240">
+            </div>
+          </div>
+          <div class="ib-caption" id="ib-caption" data-swap="after" data-html="The crew, photographed again. Archive reprint, scanned {date}. One of them is standing much closer now.">Clockwise from top left: B-17 Flying Fortresses over Europe; an Atlantic convoy; Canadian infantry landing in Normandy, 1944; the ruins of Nuremberg, 1945</div>
         </td></tr>
         <tr><th>Date</th><td id="ib-date" data-swap="after" data-html="{date} – <i>ongoing</i>">1 September 1939 – 2 September 1945<br><span class="small">(6 years and 1 day)</span></td></tr>
         <tr><th>Location</th><td id="ib-loc" data-swap="after" data-html="Here">Europe, the Pacific, the Atlantic, South-East Asia, China, the Middle East, the Mediterranean, North Africa, the Horn of Africa, Australia; briefly North and South America</td></tr>
@@ -174,6 +138,7 @@
 
     <p id="lead3" data-swap="after">The war reshaped the political map of the world. The <a href="#top">United Nations</a> was founded to prevent another such conflict, and the United States and the Soviet Union emerged as rival superpowers, setting the stage for the <a href="#top">Cold War</a>. The weakening of the European powers accelerated the <a href="#top">decolonisation</a> of Africa and Asia, while most of the countries whose industries had been destroyed moved towards economic recovery and, in Western Europe, closer integration.<sup class="ref"><a href="#ref3">[3]</a></sup></p>
 
+    <template id="r-ib-photo"><div class="photo-stack"><img src="img/crew.jpg" alt="The bomber crew. A blurred figure stands very close to the camera." width="960" height="707"><img class="ghost-layer near" src="img/ghost_near.png" alt=""></div></template>
     <template id="r-lead1"><b>The Reader</b> ({date}, {start} – ) is an ongoing conflict between a single person and everyone who read this article before them. It began when the reader opened this page and started, as they all do, at the top. It is the most recent conflict in history and, by most measures, the smallest: it has one participant on one side, and on the other side <a href="#reg-anchor">all the rest</a>.<sup class="ref"><a href="#ref13">[13]</a></sup></template>
     <template id="r-lead2">The conflict is generally considered to have begun with a scroll. Between the first paragraph and the last, the reader passed through the European and Pacific theatres, the aftermath, the casualties and the blackout, and reached a part of the article that does not appear in the table of contents. The reader then did what readers do at the end of a page. They scrolled back up. Historians regard this as the decisive moment of the conflict.<sup class="ref"><a href="#ref14">[14]</a></sup></template>
     <template id="r-lead3">The conflict will reshape nothing. No treaty will be signed. When it is over, the reader will be remembered, carefully and permanently, alongside the others. It is generally agreed that this is the purpose of the conflict, and that it was always the purpose of the article.</template>
@@ -227,28 +192,25 @@
     <p>On 7 December 1941 Japan attacked the US Pacific Fleet at Pearl Harbor and, within hours, launched offensives against British, Dutch and American possessions across South-East Asia and the Pacific. The United States declared war on Japan the following day; Germany and Italy declared war on the United States on 11 December.<sup class="ref"><a href="#ref7">[7]</a></sup></p>
 
     <h3 id="y1942">Turning points (1942–1943)</h3>
+    <figure class="thumb right" id="fig-company">
+      <div class="photo-stack">
+        <img src="img/crew.jpg" alt="Six members of a B-17 bomber crew standing in front of their aircraft" width="960" height="707">
+        <img class="ghost-layer" id="ghost-1" src="img/ghost_a.png" alt="">
+      </div>
+      <figcaption id="cap-company">The crew of a B-17 Flying Fortress of the 385th Bombardment Group, England, 1943.</figcaption>
+    </figure>
     <p>Japanese expansion was checked at the <a href="#top">Battle of Midway</a> in June 1942, in which the US Navy sank four Japanese aircraft carriers, and at <a href="#top">Guadalcanal</a> between August 1942 and February 1943. In North Africa, British Commonwealth forces defeated the German–Italian army at the <a href="#top">Second Battle of El Alamein</a> in late 1942, and Anglo-American forces landed in Morocco and Algeria shortly afterwards.</p>
     <p>On the Eastern Front, the <a href="#top">Battle of Stalingrad</a> ended in February 1943 with the destruction of the German Sixth Army. It is often described as the bloodiest battle in history.<sup class="ref"><a href="#ref8">[8]</a></sup> The German offensive at <a href="#top">Kursk</a> in July 1943 failed, and the Red Army held the initiative for the remainder of the war. That same month the Allies landed in Sicily; Italy surrendered in September, although German forces continued to fight in the Italian peninsula until 1945.<sup class="cn">[<i>citation not needed</i>]</sup></p>
+    <p>In the air, British and American bombers mounted a round-the-clock offensive against Germany from 1943. The cost to the bomber crews was severe: RAF Bomber Command lost more than 55,000 aircrew killed, and the US Eighth Air Force some 26,000. Crews were photographed beside their aircraft before or after their tours; for many, it is the only photograph of them that survives.</p>
 
     <h3 id="y1944">Allies close in (1944)</h3>
-    <figure class="thumb right" id="fig-company">
-      <svg viewBox="0 0 320 210" class="photo" role="img" aria-label="Seven soldiers standing in a row in a field">
-        <use href="#photo-base"/>
-        <g id="ghost-1" class="ghost-fig">
-          <g transform="translate(150 66)" filter="url(#soft2)"><ellipse cx="11" cy="11" rx="9" ry="10"/><path d="M-2 26 q13 -8 26 0 v72 h-26 z"/></g>
-        </g>
-        <use href="#photo-men"/>
-        <rect width="320" height="210" fill="url(#photo-fade)"/>
-      </svg>
-      <figcaption id="cap-company">Men of an infantry company photographed in a field near Caen, Normandy, July 1944.</figcaption>
-    </figure>
     <p>On 6 June 1944, known as <a href="#top">D-Day</a>, the Western Allies landed in Normandy in <a href="#top">Operation Overlord</a>, the largest seaborne invasion in history. Some 156,000 troops came ashore on the first day. After weeks of hard fighting in the hedgerow country, Allied forces broke out in late July; Paris was liberated on 25 August.</p>
     <p>Many who landed were never identified. Many who were identified were never found. Many who were found had never landed.</p>
     <p>In the east, the Soviet summer offensive, <a href="#top">Operation Bagration</a>, destroyed the German Army Group Centre and carried the Red Army to the gates of Warsaw. A German counter-offensive in the Ardennes in December, the <a href="#top">Battle of the Bulge</a>, delayed but did not stop the Allied advance. In the Pacific, the US Navy won the <a href="#top">Battle of Leyte Gulf</a> in October, the largest naval battle in history.<sup class="ref"><a href="#ref9">[9]</a></sup></p>
 
     <h3 id="y1945">Axis collapse and Allied victory (1945)</h3>
     <p>In early 1945 Soviet forces advanced from the Vistula to the Oder while the Western Allies crossed the Rhine. Hitler killed himself in Berlin on 30 April, and Germany surrendered unconditionally on 7–8 May; 8 May is celebrated as <a href="#top">Victory in Europe Day</a>. In the Pacific, American forces captured <a href="#top">Iwo Jima</a> and <a href="#top">Okinawa</a> at great cost. The United States dropped atomic bombs on Hiroshima on 6 August and Nagasaki on 9 August, and the Soviet Union declared war on Japan on 8 August. Japan announced its surrender on 15 August and signed the instrument of surrender on 2 September 1945.</p>
-    <p>The war ended on 2 September 1945.</p>
+    <p id="war-ended" data-swap="after" data-html="The war ended on 2 September 1945. Yours began at {start}.">The war ended on 2 September 1945.</p>
     <p>Most of the fighting stopped. Most of the people who had been fighting stopped.<sup class="cn">[<i>which?</i>]</sup></p>
 
     <!-- ===== marker: aging begins ===== -->
@@ -287,7 +249,7 @@
     </table>
 
     <p id="reg-anchor">The exact number will never be known. The Archive maintains a register of the war dead compiled from national records, cemetery rolls and family testimony. As of this reading, it contains <span class="register" id="register">72,413,906</span> names.</p>
-    <p>The register was formally closed in 1987.</p>
+    <p id="reg-closed" data-swap="after" data-html="The register was formally closed in 1987. It was reopened at {start} today, for one more entry.">The register was formally closed in 1987.</p>
 
     <h3 id="unidentified">Unidentified dead</h3>
     <p>A large proportion of the dead were never identified. Their graves are marked, where they are marked at all, with a standard inscription: <i>Known unto God</i>. A small sample of the register's unidentified entries is reproduced below.</p>
@@ -297,7 +259,7 @@
         <tr><td>Unknown</td><td>Ardennes, December 1944</td><td>His mother (d. 1971)</td></tr>
         <tr><td>Unknown</td><td>Leningrad, January 1942</td><td>A neighbour (d. 1990)</td></tr>
         <tr><td>Unknown</td><td>Okinawa, May 1945</td><td>No one</td></tr>
-        <tr><td>Unknown</td><td>Near Caen, July 1944</td><td>The photograph</td></tr>
+        <tr><td>Unknown</td><td>Under the wing, England, 1943</td><td>The photograph</td></tr>
         <tr><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr>
         <tr><td>Unknown</td><td>This page</td><td>No one, yet</td></tr>
         <tr class="row-reader"><td>The reader</td><td>This page, <span class="fill-date"></span></td><td><i>Pending</i></td></tr>
@@ -309,23 +271,19 @@
 
     <!-- ============ 6. PHOTOGRAPHS ============ -->
     <h2 id="photographs">In photographs <span class="edit">[<a href="#top">edit</a>]</span></h2>
-    <p>The war was the most extensively photographed conflict up to that time. Millions of images were taken by official photographers, journalists and ordinary soldiers. The photograph of the infantry company reproduced earlier in this article is one of the better-known images of the Normandy campaign. It has been reprinted many times.</p>
+    <p>The war was the most extensively photographed conflict up to that time. Millions of images were taken by official photographers, journalists and ordinary soldiers. The photograph of the bomber crew reproduced earlier in this article is typical of thousands taken at airfields in England. It has been reprinted many times.</p>
 
     <figure class="thumb center" id="fig-company-2">
-      <svg viewBox="0 0 320 210" class="photo" role="img" aria-label="The same photograph. There are eight soldiers.">
-        <use href="#photo-base"/>
-        <g id="ghost-2" class="ghost-fig slowly">
-          <g transform="translate(150 60)" filter="url(#soft2)"><ellipse cx="11" cy="11" rx="10" ry="11"/><path d="M-4 27 q15 -9 30 0 v80 h-30 z"/></g>
-        </g>
-        <use href="#photo-men"/>
-        <rect width="320" height="210" fill="url(#photo-fade)"/>
-      </svg>
-      <figcaption>The same photograph. Archive reprint, scanned 2026. Count them.</figcaption>
+      <div class="photo-stack">
+        <img src="img/crew.jpg" alt="The same photograph of the bomber crew" width="960" height="707">
+        <img class="ghost-layer slowly" id="ghost-2" src="img/ghost_a.png" alt="">
+      </div>
+      <figcaption id="cap-company-2" data-swap="gone" data-html="The same photograph. Count them again.">The same photograph. Archive reprint, scanned 2026. Count them.</figcaption>
     </figure>
 
-    <p>The original negative, held in the Archive's collection, shows seven men. The company roster lists seven men, and all seven were accounted for after the war: five returned home, two are buried at Ranville.</p>
-    <p>Archivists have been unable to identify the eighth.</p>
-    <p>He does not appear on the negative. He appears in every print made from it after 1946, and in each successive print he is standing slightly closer to the camera. In the earliest prints he is barely visible behind the others. In the most recent scan he is no longer standing behind anyone. It has been suggested that he is not walking towards the camera at all, but towards whoever is looking at the photograph.<sup class="cn">[<i>do not compare with earlier image</i>]</sup></p>
+    <p>The original negative, held in the Archive's collection, shows six men. The caption card filed with it lists six names. Every one of the six has been identified.</p>
+    <p>Archivists have been unable to identify the seventh.</p>
+    <p>He does not appear on the negative. He appears in every print made from it after 1946, and in each successive print he is standing slightly closer to the camera. In the earliest prints he is barely visible in the shadow under the wing. Nobody who has examined the prints has been able to make out his face. In the most recent scan he is no longer standing behind anyone. It has been suggested that he is not walking towards the camera at all, but towards whoever is looking at the photograph.<sup class="cn">[<i>do not compare with earlier image</i>]</sup></p>
 
     <!-- ============ 7. HOME FRONT / BLACKOUT ============ -->
     <h2 id="blackout">The home front <span class="edit">[<a href="#top">edit</a>]</span></h2>
@@ -352,6 +310,10 @@
     <p><span class="acro">E</span>ach generation is asked to take up the duty, and each generation is given the same three words. They are carved on cenotaphs and printed on poppies. They are usually read as a promise.</p>
     <!-- ===== marker: blackout complete ===== -->
     <div class="marker" id="m-dark-b"></div>
+    <figure class="thumb center wide" id="fig-cemetery">
+      <img src="img/cemetery.jpg" alt="Rows of white crosses at a war cemetery" width="960" height="640">
+      <figcaption>Normandy American Cemetery, Colleville-sur-Mer. <span id="graves" data-swap="after" data-html="9,389 graves. One of them has no name on it yet.">9,388 graves.</span></figcaption>
+    </figure>
     <p class="lest">Lest we forget.</p>
     <p>They were always a warning.</p>
 
@@ -370,7 +332,7 @@
     <p>The word <i>conscript</i> comes from the Latin <i>conscribere</i>: to write together, to enrol, to <i>write in</i>. You were written into this article at <span class="fill-start"></span>, when you began to read it. Nobody has ever been written out.</p>
 
     <h3 id="survivors">Survivors</h3>
-    <p>There are no surviving readers of this article.</p>
+    <p id="no-survivors" data-swap="after" data-html="There are no surviving readers of this article. There is one remaining reader.">There are no surviving readers of this article.</p>
 
     <!-- ============ THE READER ============ -->
     <h2 id="reader">The reader</h2>
@@ -378,8 +340,26 @@
     <p>You began reading at <span class="fill-start"></span>. It is now <span id="now-time"></span>. You have been here for <span id="elapsed">less than a minute</span>. The war lasted six years and one day. You will be here much longer than that.</p>
     <p id="tod"></p>
     <p class="viewers"><span class="dot" aria-hidden="true"></span> <span id="viewers">1 person is reading this article right now.</span></p>
+    <table class="dossier" id="dossier">
+      <caption>Reader record <span class="small">(provisional, updating)</span></caption>
+      <tbody>
+        <tr><th>Reader no.</th><td id="d-no"></td></tr>
+        <tr><th>Began reading</th><td><span class="fill-start"></span>, <span class="fill-date"></span></td></tr>
+        <tr><th>Time on this page</th><td id="d-time"></td></tr>
+        <tr><th>Lingered longest on</th><td id="d-linger"></td></tr>
+        <tr><th>Looked at the photograph</th><td id="d-photo"></td></tr>
+        <tr><th>Scrolled back to check</th><td id="d-back"></td></tr>
+        <tr><th>Hidden lines found</th><td id="d-found"></td></tr>
+        <tr><th>Looked away from the page</th><td id="d-away"></td></tr>
+        <tr><th>Status</th><td id="d-status"><i>Being remembered</i></td></tr>
+      </tbody>
+    </table>
     <p>You came here to read about the dead. That is what all of us did. We were curious too. We started at the top, too, and the further down we went the darker it got, and we kept going, because that is what readers do. Every line you scroll, you fall a little further.</p>
     <p>That is why they call us <em>the fallen</em>.</p>
+    <div class="live-edit" id="live-edit">
+      <div class="live-head"><span class="pen" aria-hidden="true">&#9998;</span> <b>1 other user</b> is currently editing this section.</div>
+      <p class="typed" id="typed" aria-live="polite"></p>
+    </div>
     <p>Please do not scroll back up. It has already been changed.</p>
     <p class="last-line">There is nothing below this line.</p>
     <hr class="the-line">
@@ -432,42 +412,10 @@
   </main>
 </div>
 
-<!-- shared photograph definitions -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <filter id="soft2"><feGaussianBlur stdDeviation="2.2"/></filter>
-    <filter id="photo-grain" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 .25  0 0 0 0 .2  0 0 0 0 .15  0 0 0 .35 0"/>
-      <feComposite in2="SourceGraphic" operator="in"/>
-    </filter>
-    <radialGradient id="photo-fade" cx="50%" cy="50%" r="70%">
-      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#1a140c" stop-opacity=".55"/>
-    </radialGradient>
-    <g id="photo-base">
-      <rect width="320" height="210" fill="#cdbf9f"/>
-      <rect y="0" width="320" height="95" fill="#d9ccae"/>
-      <path d="M0 95 Q60 86 120 92 T240 90 T320 93 V210 H0 Z" fill="#a89a7b"/>
-      <path d="M0 98 q30 -14 60 -6 q20 -8 44 -2 l0 10 H0 Z" fill="#7e735b"/>
-      <path d="M232 92 q22 -18 50 -10 q18 -6 38 2 v12 h-88 z" fill="#776c55"/>
-      <rect width="320" height="210" filter="url(#photo-grain)"/>
-    </g>
-    <g id="photo-men" fill="#3a3128">
-      <g transform="translate(34 78)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v70 h-26 z"/></g>
-      <g transform="translate(70 74)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v74 h-26 z"/></g>
-      <g transform="translate(106 80)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v68 h-26 z"/></g>
-      <g transform="translate(174 76)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v72 h-26 z"/></g>
-      <g transform="translate(210 79)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v69 h-26 z"/></g>
-      <g transform="translate(246 75)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v73 h-26 z"/></g>
-      <g transform="translate(282 81)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v67 h-26 z"/></g>
-    </g>
-  </defs>
-</svg>
 
 <!--
-  Seven men in the negative.
-  Eight in the print.
+  Six men in the negative.
+  Seven in the print.
   Count again when you scroll back up.
 -->
 <script src="script.js"></script>
