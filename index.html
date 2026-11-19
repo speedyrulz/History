@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World War II - The Archive</title>
+<meta name="description" content="World War II: the deadliest conflict in human history. From The Archive, the free encyclopedia.">
+<link rel="stylesheet" href="style.css">
+<!--
+  Thank you for viewing the source.
+  Most readers never look underneath.
+-->
+</head>
+<body>
+
+<div id="grain" aria-hidden="true"></div>
+<div id="vignette" aria-hidden="true"></div>
+<div id="whisper" aria-live="polite"></div>
+
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="The Archive home">
+    <svg class="logo" viewBox="0 0 60 60" aria-hidden="true">
+      <circle cx="30" cy="30" r="26" fill="none" stroke="currentColor" stroke-width="2"/>
+      <ellipse cx="30" cy="30" rx="11" ry="26" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="4" y1="30" x2="56" y2="30" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M8 17 H52 M8 43 H52" stroke="currentColor" stroke-width="1.2" fill="none"/>
+      <!-- an eye, if you squint -->
+      <circle id="logo-pupil" data-swap="mid" data-cls="open" cx="30" cy="30" r="3.2" fill="currentColor" opacity="0"/>
+    </svg>
+    <span class="wordmark">
+      <span class="name">THE ARCHIVE</span>
+      <span class="tag" id="tagline" data-swap="mid" data-html="The Remembering Encyclopedia">The Free Encyclopedia</span>
+    </span>
+  </a>
+  <form class="search" role="search" onsubmit="return false">
+    <input id="search" type="search" placeholder="Search The Archive" aria-label="Search The Archive" data-swap="mid" data-ph="They are searching too">
+    <button type="submit">Search</button>
+  </form>
+  <nav class="userlinks">
+    <a href="#top">Donate</a>
+    <a href="#top" id="ul-create" data-swap="mid" data-html="Created account">Create account</a>
+    <a href="#top" id="ul-login" data-swap="mid" data-html="Already logged">Log in</a>
+  </nav>
+</header>
+
+<div class="layout" id="top">
+
+  <aside class="sidebar" aria-label="Site navigation">
+    <div class="portal">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#top" data-swap="mid" data-html="Remain page">Main page</a></li>
+        <li><a href="#toc" data-swap="mid" data-html="Discontents">Contents</a></li>
+        <li><a href="#top" data-swap="mid" data-html="Recurrent events">Current events</a></li>
+        <li><a href="#top" data-swap="mid" data-html="Random reader">Random article</a></li>
+        <li><a href="#top" data-swap="mid" data-html="About you">About The Archive</a></li>
+        <li><a href="#top" data-swap="mid" data-html="We will contact you">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="portal">
+      <h3>Contribute</h3>
+      <ul>
+        <li><a href="#top">Help</a></li>
+        <li><a href="#top" data-swap="mid" data-html="Learn to forget">Learn to edit</a></li>
+        <li><a href="#top">Community portal</a></li>
+        <li><a href="#top" data-swap="mid" data-html="Recent chances">Recent changes</a></li>
+        <li><a href="#top" data-swap="mid" data-html="Upload a face">Upload file</a></li>
+      </ul>
+    </div>
+    <div class="portal">
+      <h3>Tools</h3>
+      <ul>
+        <li><a href="#top" data-swap="mid" data-html="What links to you">What links here</a></li>
+        <li><a href="#top">Related changes</a></li>
+        <li><a href="#top" data-swap="mid" data-html="Permanent">Permanent link</a></li>
+        <li><a href="#top">Page information</a></li>
+        <li><a href="#top" data-swap="mid" data-html="Cite yourself">Cite this page</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <div class="tabs">
+      <div class="tabs-left">
+        <a class="tab active" href="#top">Article</a>
+        <a class="tab" href="#top" data-swap="mid" data-html="They talk">Talk</a>
+      </div>
+      <div class="tabs-right">
+        <a class="tab active" href="#top" data-swap="mid" data-html="Being read">Read</a>
+        <a class="tab" href="#top" data-swap="mid" data-html="Edited">Edit</a>
+        <a class="tab" href="#top" data-swap="mid" data-html="History views you">View history</a>
+      </div>
+    </div>
+
+    <h1 id="title" data-swap="after" data-html="The Reader">World War II</h1>
+    <div class="subtitle" id="subtitle" data-swap="after" data-html="From The Archive, which remembers everyone who reads it">From The Archive, the free encyclopedia</div>
+
+    <div class="hatnote" id="hatnote" data-swap="after" data-html="&quot;World War II&quot; redirects here. It no longer needs to.">
+      "Second World War" and "WWII" redirect here. For other uses, see <a href="#top">Second World War (disambiguation)</a>.<span id="welcome-back"></span>
+    </div>
+
+    <!-- ============ INFOBOX ============ -->
+    <table class="infobox" id="infobox">
+      <caption id="ib-cap" data-swap="after" data-html="The Reader">World War II</caption>
+      <tbody>
+        <tr><td colspan="2" class="ib-image">
+          <svg viewBox="0 0 300 220" class="collage" role="img" aria-label="Collage of wartime scenes">
+            <defs>
+              <filter id="sepia-grain" x="0" y="0" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" result="n"/>
+                <feColorMatrix in="n" type="matrix" values="0 0 0 0 .3  0 0 0 0 .25  0 0 0 0 .18  0 0 0 .22 0" result="g"/>
+                <feComposite in="g" in2="SourceGraphic" operator="in" result="gg"/>
+                <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="gg"/></feMerge>
+              </filter>
+              <filter id="soft"><feGaussianBlur stdDeviation="1.4"/></filter>
+            </defs>
+            <g filter="url(#sepia-grain)">
+              <!-- panel 1 : bombers -->
+              <rect x="0" y="0" width="148" height="108" fill="#cfc2a6"/>
+              <g fill="#3b342b">
+                <path d="M30 40 l30 -4 l4 -6 l3 6 l22 -2 l-22 6 l-3 6 l-4 -5 z"/>
+                <path d="M70 66 l26 -3 l3 -5 l3 5 l19 -2 l-19 5 l-3 5 l-3 -4 z"/>
+                <path d="M100 28 l18 -2 l2 -4 l2 4 l13 -1 l-13 3 l-2 4 l-2 -3 z"/>
+              </g>
+              <!-- panel 2 : convoy -->
+              <rect x="152" y="0" width="148" height="108" fill="#bfb6a0"/>
+              <rect x="152" y="64" width="148" height="44" fill="#8f8873"/>
+              <g fill="#2e2a24">
+                <path d="M170 66 h46 l-6 9 h-34 z"/><rect x="186" y="56" width="8" height="10"/><rect x="198" y="59" width="4" height="7"/>
+                <path d="M238 70 h40 l-5 7 h-30 z"/><rect x="252" y="62" width="7" height="8"/>
+              </g>
+              <path d="M152 80 q12 -3 24 0 t24 0 t24 0 t24 0 t24 0 t24 0" stroke="#a49d86" fill="none"/>
+              <!-- panel 3 : ruined city -->
+              <rect x="0" y="112" width="148" height="108" fill="#c8bca3"/>
+              <path d="M0 220 V176 h14 v-22 l6 -6 v28 h12 v-40 h10 l3 12 v28 h14 v-18 l8 -10 v28 h16 v-34 h12 v22 l6 -8 v20 h18 v-12 h12 v40 z" fill="#4a4237"/>
+              <rect x="26" y="160" width="3" height="4" fill="#c8bca3"/><rect x="88" y="168" width="3" height="4" fill="#c8bca3"/>
+              <!-- panel 4 : infantry -->
+              <rect x="152" y="112" width="148" height="108" fill="#cbbfa5"/>
+              <rect x="152" y="182" width="148" height="38" fill="#a59a80"/>
+              <g fill="#3a332a" id="p4-men">
+                <g transform="translate(170 150)"><circle cx="6" cy="6" r="5"/><rect x="0" y="12" width="12" height="28" rx="4"/></g>
+                <g transform="translate(192 148)"><circle cx="6" cy="6" r="5"/><rect x="0" y="12" width="12" height="30" rx="4"/></g>
+                <g transform="translate(214 151)"><circle cx="6" cy="6" r="5"/><rect x="0" y="12" width="12" height="27" rx="4"/></g>
+                <g transform="translate(236 149)"><circle cx="6" cy="6" r="5"/><rect x="0" y="12" width="12" height="29" rx="4"/></g>
+                <g transform="translate(258 150)"><circle cx="6" cy="6" r="5"/><rect x="0" y="12" width="12" height="28" rx="4"/></g>
+              </g>
+              <g id="p4-near" class="p4-near" data-swap="after" data-cls="shown" filter="url(#soft)" fill="#1d1813">
+                <circle cx="226" cy="168" r="17"/><rect x="200" y="186" width="52" height="40" rx="14"/>
+              </g>
+            </g>
+            <rect x="148" y="0" width="4" height="220" fill="#f8f9fa" class="gutter"/>
+            <rect x="0" y="108" width="300" height="4" fill="#f8f9fa" class="gutter"/>
+          </svg>
+          <div class="ib-caption" id="ib-caption" data-swap="after" data-html="Clockwise from top left: the sky above you; a sea of names; the room you are sitting in; infantry in Normandy, 1944. They are closer now.">Clockwise from top left: bombers over Germany, 1943; an Atlantic convoy; ruins of a European city, 1945; infantry in Normandy, 1944</div>
+        </td></tr>
+        <tr><th>Date</th><td id="ib-date" data-swap="after" data-html="{date} – <i>ongoing</i>">1 September 1939 – 2 September 1945<br><span class="small">(6 years and 1 day)</span></td></tr>
+        <tr><th>Location</th><td id="ib-loc" data-swap="after" data-html="Here">Europe, the Pacific, the Atlantic, South-East Asia, China, the Middle East, the Mediterranean, North Africa, the Horn of Africa, Australia; briefly North and South America</td></tr>
+        <tr><th>Result</th><td id="ib-result" data-swap="after" data-html="Pending">Allied victory</td></tr>
+        <tr class="ib-section"><th colspan="2">Belligerents</th></tr>
+        <tr class="ib-split"><td id="ib-b1" data-swap="after" data-html="<b>The reader</b>"><b>Allies</b><br><a href="#top">Soviet Union</a><br><a href="#top">United States</a><br><a href="#top">United Kingdom</a><br><a href="#top">China</a><br><a href="#top">France</a><br><a href="#top">Poland</a><br><span class="small">and others</span></td>
+            <td id="ib-b2" data-swap="after" data-html="<b>Everyone who read this before you</b>"><b>Axis</b><br><a href="#top">Germany</a><br><a href="#top">Japan</a><br><a href="#top">Italy</a><br><span class="small">and others</span></td></tr>
+        <tr class="ib-section"><th colspan="2">Casualties and losses</th></tr>
+        <tr><th>Military dead</th><td id="ib-mil" data-swap="after" data-html="0 (so far)">Over 21,000,000</td></tr>
+        <tr><th>Civilian dead</th><td id="ib-civ" data-swap="after" data-html="1 (expected)">Over 50,000,000</td></tr>
+        <tr><th>Total dead</th><td id="ib-total" data-swap="after" data-html="72,413,906 + 1">70,000,000 – 85,000,000</td></tr>
+      </tbody>
+    </table>
+
+    <!-- ============ LEAD ============ -->
+    <p id="lead1" data-swap="after"><b>World War II</b> or <b>the Second World War</b> (1 September 1939 – 2 September 1945) was a global conflict fought between two coalitions, the <a href="#top">Allies</a> and the <a href="#top">Axis powers</a>. Almost every country in the world took part, and many of the participants placed their entire economic, industrial and scientific capacity at the service of the war effort, a condition historians describe as <a href="#top">total war</a>. Aircraft and armoured vehicles played a central role, making possible the <a href="#top">strategic bombing</a> of cities and the only use of <a href="#top">nuclear weapons</a> in warfare. It was the deadliest conflict in human history, killing an estimated 70 to 85 million people, the majority of them civilians. Millions died in <a href="#top">genocides</a>, including <a href="#top">the Holocaust</a>, and from massacres, deliberate starvation and disease.<sup class="ref"><a href="#ref1">[1]</a></sup></p>
+
+    <p id="lead2" data-swap="after">The war is generally considered to have begun with the <a href="#top">German invasion of Poland</a>, after which Britain and France declared war on Germany. Between 1939 and 1941 Germany conquered or subdued much of continental Europe. In June 1941 it invaded the <a href="#top">Soviet Union</a>, opening the largest land theatre in history, and in December 1941 Japan attacked the United States at <a href="#top">Pearl Harbor</a> and seized much of South-East Asia and the western Pacific. Axis momentum was halted in 1942–43 at <a href="#top">Midway</a>, <a href="#top">El Alamein</a> and <a href="#top">Stalingrad</a>. The Allies invaded <a href="#top">Normandy</a> in June 1944, Germany surrendered in May 1945, and Japan surrendered in August 1945 following the atomic bombings of <a href="#top">Hiroshima and Nagasaki</a> and the Soviet declaration of war.<sup class="ref"><a href="#ref2">[2]</a></sup></p>
+
+    <p id="lead3" data-swap="after">The war reshaped the political map of the world. The <a href="#top">United Nations</a> was founded to prevent another such conflict, and the United States and the Soviet Union emerged as rival superpowers, setting the stage for the <a href="#top">Cold War</a>. The weakening of the European powers accelerated the <a href="#top">decolonisation</a> of Africa and Asia, while most of the countries whose industries had been destroyed moved towards economic recovery and, in Western Europe, closer integration.<sup class="ref"><a href="#ref3">[3]</a></sup></p>
+
+    <template id="r-lead1"><b>The Reader</b> ({date}, {start} – ) is an ongoing conflict between a single person and everyone who read this article before them. It began when the reader opened this page and started, as they all do, at the top. It is the most recent conflict in history and, by most measures, the smallest: it has one participant on one side, and on the other side <a href="#reg-anchor">all the rest</a>.<sup class="ref"><a href="#ref13">[13]</a></sup></template>
+    <template id="r-lead2">The conflict is generally considered to have begun with a scroll. Between the first paragraph and the last, the reader passed through the European and Pacific theatres, the aftermath, the casualties and the blackout, and reached a part of the article that does not appear in the table of contents. The reader then did what readers do at the end of a page. They scrolled back up. Historians regard this as the decisive moment of the conflict.<sup class="ref"><a href="#ref14">[14]</a></sup></template>
+    <template id="r-lead3">The conflict will reshape nothing. No treaty will be signed. When it is over, the reader will be remembered, carefully and permanently, alongside the others. It is generally agreed that this is the purpose of the conflict, and that it was always the purpose of the article.</template>
+
+    <!-- ============ TOC ============ -->
+    <nav class="toc" id="toc" aria-label="Contents">
+      <div class="toc-title">Contents <span class="toc-hide">[hide]</span></div>
+      <ol>
+        <li><a href="#chronology"><span class="tn">1</span> Chronology</a></li>
+        <li><a href="#background"><span class="tn">2</span> Background</a></li>
+        <li><a href="#course"><span class="tn">3</span> Course of the war</a>
+          <ol>
+            <li><a href="#y1939"><span class="tn">3.1</span> War breaks out in Europe (1939–1940)</a></li>
+            <li><a href="#y1941"><span class="tn">3.2</span> The war widens (1941)</a></li>
+            <li><a href="#y1942"><span class="tn">3.3</span> Turning points (1942–1943)</a></li>
+            <li><a href="#y1944"><span class="tn">3.4</span> Allies close in (1944)</a></li>
+            <li><a href="#y1945"><span class="tn">3.5</span> Axis collapse and Allied victory (1945)</a></li>
+          </ol>
+        </li>
+        <li><a href="#aftermath"><span class="tn">4</span> Aftermath</a></li>
+        <li><a href="#casualties"><span class="tn">5</span> Casualties</a></li>
+        <li><a href="#photographs"><span class="tn">6</span> In photographs</a></li>
+        <li><a href="#blackout"><span class="tn">7</span> The home front</a></li>
+        <li><a href="#memory"><span class="tn">8</span> Legacy and remembrance</a></li>
+        <li><a href="#seealso"><span class="tn">9</span> See also</a></li>
+        <li><a href="#references"><span class="tn">10</span> References</a></li>
+        <li id="toc-extra" data-swap="after" data-html="<a href=&quot;#reader&quot;><span class=&quot;tn&quot;>11</span> The reader</a>" class="toc-extra"></li>
+      </ol>
+    </nav>
+
+    <!-- ============ 1. CHRONOLOGY ============ -->
+    <h2 id="chronology">Chronology <span class="edit">[<a href="#top">edit</a>]</span></h2>
+    <p>The war is usually dated from the German invasion of Poland on 1 September 1939 and the British and French declarations of war that followed two days later. Some historians prefer an earlier start: the Japanese invasion of <a href="#top">Manchuria</a> in 1931, or the outbreak of full-scale war between Japan and China in July 1937. Others treat the separate wars in Europe and Asia as having merged into a single world war only in December 1941.<sup class="ref"><a href="#ref4">[4]</a></sup></p>
+    <p>The end of the war is most commonly given as 2 September 1945, when Japan formally surrendered aboard the battleship USS <i>Missouri</i> in Tokyo Bay. A peace treaty with Japan was not signed until 1951, however, and the final settlement concerning Germany was concluded only in 1990. <span id="ended-seed" data-swap="after" data-html="It has not ended.">For these reasons some scholars argue that it is difficult to say precisely when the war ended.</span></p>
+
+    <!-- ============ 2. BACKGROUND ============ -->
+    <h2 id="background">Background <span class="edit">[<a href="#top">edit</a>]</span></h2>
+    <p>The First World War left Europe exhausted and resentful. The <a href="#top">Treaty of Versailles</a> imposed territorial losses, disarmament and reparations on Germany, and the <a href="#top">League of Nations</a>, created to keep the peace, proved unable to restrain aggressive states. The <a href="#top">Great Depression</a> that began in 1929 discredited liberal governments and strengthened extremist movements across the continent.</p>
+    <p>In Italy, Benito Mussolini's Fascists had held power since 1922. In Germany, Adolf Hitler's National Socialist party came to power in 1933, dismantled the Weimar Republic and began to rearm in open defiance of Versailles. In Japan, the military gained increasing control of policy and pursued expansion on the Asian mainland. Germany remilitarised the Rhineland in 1936, absorbed Austria in March 1938 and, after the <a href="#top">Munich Agreement</a> of September 1938, the Sudetenland. In August 1939 Germany and the Soviet Union signed the <a href="#top">Molotov–Ribbentrop Pact</a>, whose secret protocol divided Eastern Europe between them.<sup class="ref"><a href="#ref5">[5]</a></sup></p>
+
+    <!-- ============ 3. COURSE ============ -->
+    <h2 id="course">Course of the war <span class="edit">[<a href="#top">edit</a>]</span></h2>
+
+    <h3 id="y1939">War breaks out in Europe (1939–1940)</h3>
+    <p>Germany invaded Poland on 1 September 1939, and the Soviet Union invaded from the east on 17 September. Poland was partitioned within weeks. In the west, months of near-inactivity followed, a period the British press called the "Phoney War". The Soviet Union attacked Finland in November 1939, beginning the <a href="#top">Winter War</a>.</p>
+    <p>In April 1940 Germany occupied Denmark and invaded Norway. On 10 May it attacked the Netherlands, Belgium, Luxembourg and France. German armoured columns broke through the Ardennes and reached the Channel coast, trapping the British Expeditionary Force and much of the French army. Over nine days, some 338,000 Allied soldiers were evacuated from the beaches of <a href="#top">Dunkirk</a>. France signed an armistice on 22 June. Through the summer and autumn the German air force fought the Royal Air Force for control of the skies over southern England in the <a href="#top">Battle of Britain</a>, and failed; the bombing of British cities, known as <a href="#top">the Blitz</a>, continued into May 1941.<sup class="ref"><a href="#ref6">[6]</a></sup></p>
+
+    <h3 id="y1941">The war widens (1941)</h3>
+    <p>In the spring of 1941 Germany overran Yugoslavia and Greece, and German forces were sent to North Africa to support Italy. On 22 June 1941 Germany and its allies invaded the Soviet Union in <a href="#top">Operation Barbarossa</a>, the largest military operation ever undertaken. German forces advanced deep into Soviet territory, encircling Leningrad and coming within sight of Moscow before a Soviet counter-offensive in December drove them back.</p>
+    <p>The <a href="#top">siege of Leningrad</a> lasted 872 days. Around a million civilians died, most of them from starvation. The siege of Leningrad lasted 872 days.</p>
+    <p>On 7 December 1941 Japan attacked the US Pacific Fleet at Pearl Harbor and, within hours, launched offensives against British, Dutch and American possessions across South-East Asia and the Pacific. The United States declared war on Japan the following day; Germany and Italy declared war on the United States on 11 December.<sup class="ref"><a href="#ref7">[7]</a></sup></p>
+
+    <h3 id="y1942">Turning points (1942–1943)</h3>
+    <p>Japanese expansion was checked at the <a href="#top">Battle of Midway</a> in June 1942, in which the US Navy sank four Japanese aircraft carriers, and at <a href="#top">Guadalcanal</a> between August 1942 and February 1943. In North Africa, British Commonwealth forces defeated the German–Italian army at the <a href="#top">Second Battle of El Alamein</a> in late 1942, and Anglo-American forces landed in Morocco and Algeria shortly afterwards.</p>
+    <p>On the Eastern Front, the <a href="#top">Battle of Stalingrad</a> ended in February 1943 with the destruction of the German Sixth Army. It is often described as the bloodiest battle in history.<sup class="ref"><a href="#ref8">[8]</a></sup> The German offensive at <a href="#top">Kursk</a> in July 1943 failed, and the Red Army held the initiative for the remainder of the war. That same month the Allies landed in Sicily; Italy surrendered in September, although German forces continued to fight in the Italian peninsula until 1945.<sup class="cn">[<i>citation not needed</i>]</sup></p>
+
+    <h3 id="y1944">Allies close in (1944)</h3>
+    <figure class="thumb right" id="fig-company">
+      <svg viewBox="0 0 320 210" class="photo" role="img" aria-label="Seven soldiers standing in a row in a field">
+        <use href="#photo-base"/>
+        <g id="ghost-1" class="ghost-fig">
+          <g transform="translate(150 66)" filter="url(#soft2)"><ellipse cx="11" cy="11" rx="9" ry="10"/><path d="M-2 26 q13 -8 26 0 v72 h-26 z"/></g>
+        </g>
+        <use href="#photo-men"/>
+        <rect width="320" height="210" fill="url(#photo-fade)"/>
+      </svg>
+      <figcaption id="cap-company">Men of an infantry company photographed in a field near Caen, Normandy, July 1944.</figcaption>
+    </figure>
+    <p>On 6 June 1944, known as <a href="#top">D-Day</a>, the Western Allies landed in Normandy in <a href="#top">Operation Overlord</a>, the largest seaborne invasion in history. Some 156,000 troops came ashore on the first day. After weeks of hard fighting in the hedgerow country, Allied forces broke out in late July; Paris was liberated on 25 August.</p>
+    <p>Many who landed were never identified. Many who were identified were never found. Many who were found had never landed.</p>
+    <p>In the east, the Soviet summer offensive, <a href="#top">Operation Bagration</a>, destroyed the German Army Group Centre and carried the Red Army to the gates of Warsaw. A German counter-offensive in the Ardennes in December, the <a href="#top">Battle of the Bulge</a>, delayed but did not stop the Allied advance. In the Pacific, the US Navy won the <a href="#top">Battle of Leyte Gulf</a> in October, the largest naval battle in history.<sup class="ref"><a href="#ref9">[9]</a></sup></p>
+
+    <h3 id="y1945">Axis collapse and Allied victory (1945)</h3>
+    <p>In early 1945 Soviet forces advanced from the Vistula to the Oder while the Western Allies crossed the Rhine. Hitler killed himself in Berlin on 30 April, and Germany surrendered unconditionally on 7–8 May; 8 May is celebrated as <a href="#top">Victory in Europe Day</a>. In the Pacific, American forces captured <a href="#top">Iwo Jima</a> and <a href="#top">Okinawa</a> at great cost. The United States dropped atomic bombs on Hiroshima on 6 August and Nagasaki on 9 August, and the Soviet Union declared war on Japan on 8 August. Japan announced its surrender on 15 August and signed the instrument of surrender on 2 September 1945.</p>
+    <p>The war ended on 2 September 1945.</p>
+    <p>Most of the fighting stopped. Most of the people who had been fighting stopped.<sup class="cn">[<i>which?</i>]</sup></p>
+
+    <!-- ===== marker: aging begins ===== -->
+    <div class="marker" id="m-age-a"></div>
+
+    <!-- ============ 4. AFTERMATH ============ -->
+    <h2 id="aftermath">Aftermath <span class="edit">[<a href="#top">edit</a>]</span></h2>
+    <div class="ambox">
+      <span class="ambox-icon" aria-hidden="true">?</span>
+      <div>This section may contain material that was not written by any registered editor. <span class="small">(<i>November 2026</i>)</span></div>
+    </div>
+    <p><span class="acro">S</span>hortly after the war the victorious powers established the <a href="#top">United Nations</a>, which formally came into being on 24 October 1945. Its charter committed members to the peaceful settlement of disputes, and its five permanent Security Council members were the principal Allied powers.</p>
+    <p><span class="acro">T</span>rials of leading war criminals were held at <a href="#top">Nuremberg</a> in 1945–46 and in Tokyo in 1946–48. They established, for the first time, that individuals could be held personally responsible for crimes against peace and crimes against humanity, and that following orders was no defence.<sup class="ref"><a href="#ref10">[10]</a></sup></p>
+    <p><span class="acro">I</span>n Europe the continent was divided. Germany and Austria were split into four zones of occupation, and the line separating the Soviet zone from the others soon hardened into what Winston Churchill called an "iron curtain". Western Europe was rebuilt with American aid under the <a href="#top">Marshall Plan</a>. The East was rebuilt too, by other methods, and the rebuilding went on for a long time, and in places it is still going on, very quietly, at night.</p>
+    <p><span class="acro">L</span>arge-scale population movements followed the end of the fighting. Borders were redrawn, and as many as 12 million ethnic Germans were expelled from Central and Eastern Europe. Millions of displaced persons, former prisoners and forced labourers made their way home on foot. Many never arrived. Some are said to be still walking. <span class="ghost">They walk most at night, when nobody is counting.</span></p>
+    <p><span class="acro">L</span>ong after the ceasefires the war continued to make itself felt. Unexploded ordnance is still recovered every year from fields and building sites across Europe and the Pacific. Human remains are still recovered too. They turn up so regularly, and in such numbers, that some researchers have begun to ask whether they are being recovered, or <em>returned</em>.<sup class="cn">[<i>by whom?</i>]</sup></p>
+
+    <!-- ============ 5. CASUALTIES ============ -->
+    <h2 id="casualties">Casualties <span class="edit">[<a href="#top">edit</a>]</span></h2>
+    <p>World War II was the deadliest conflict in human history. Estimates of the total dead range from 70 to 85 million, about three percent of the world's population in 1940. Civilians accounted for the majority, killed by bombing, massacre, genocide, famine and disease. The Soviet Union suffered the largest losses of any nation, roughly 27 million dead; China lost somewhere between 15 and 20 million. Poland lost around a sixth of its pre-war population.<sup class="ref"><a href="#ref11">[11]</a></sup></p>
+
+    <table class="wikitable">
+      <caption>Estimated deaths, selected countries</caption>
+      <thead><tr><th>Country</th><th>Total dead (approx.)</th><th>Remembered</th></tr></thead>
+      <tbody>
+        <tr><td>Soviet Union</td><td>27,000,000</td><td>Yes</td></tr>
+        <tr><td>China</td><td>15,000,000 – 20,000,000</td><td>Yes</td></tr>
+        <tr><td>Germany</td><td>6,600,000 – 8,800,000</td><td>Yes</td></tr>
+        <tr><td>Poland</td><td>5,600,000 – 5,800,000</td><td>Yes</td></tr>
+        <tr><td>Japan</td><td>2,500,000 – 3,100,000</td><td>Yes</td></tr>
+        <tr><td>Yugoslavia</td><td>1,000,000</td><td>Yes</td></tr>
+        <tr><td>United Kingdom</td><td>450,000</td><td>Yes</td></tr>
+        <tr><td>United States</td><td>420,000</td><td>Yes</td></tr>
+        <tr><td><i>Unrecorded</i></td><td><i>unknown</i></td><td><i>Still being remembered</i></td></tr>
+      </tbody>
+    </table>
+
+    <p id="reg-anchor">The exact number will never be known. The Archive maintains a register of the war dead compiled from national records, cemetery rolls and family testimony. As of this reading, it contains <span class="register" id="register">72,413,906</span> names.</p>
+    <p>The register was formally closed in 1987.</p>
+
+    <h3 id="unidentified">Unidentified dead</h3>
+    <p>A large proportion of the dead were never identified. Their graves are marked, where they are marked at all, with a standard inscription: <i>Known unto God</i>. A small sample of the register's unidentified entries is reproduced below.</p>
+    <table class="wikitable register-table">
+      <thead><tr><th>Name</th><th>Last seen</th><th>Remembered by</th></tr></thead>
+      <tbody>
+        <tr><td>Unknown</td><td>Ardennes, December 1944</td><td>His mother (d. 1971)</td></tr>
+        <tr><td>Unknown</td><td>Leningrad, January 1942</td><td>A neighbour (d. 1990)</td></tr>
+        <tr><td>Unknown</td><td>Okinawa, May 1945</td><td>No one</td></tr>
+        <tr><td>Unknown</td><td>Near Caen, July 1944</td><td>The photograph</td></tr>
+        <tr><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr>
+        <tr><td>Unknown</td><td>This page</td><td>No one, yet</td></tr>
+        <tr class="row-reader"><td>The reader</td><td>This page, <span class="fill-date"></span></td><td><i>Pending</i></td></tr>
+      </tbody>
+    </table>
+
+    <!-- ===== marker: aging complete ===== -->
+    <div class="marker" id="m-age-b"></div>
+
+    <!-- ============ 6. PHOTOGRAPHS ============ -->
+    <h2 id="photographs">In photographs <span class="edit">[<a href="#top">edit</a>]</span></h2>
+    <p>The war was the most extensively photographed conflict up to that time. Millions of images were taken by official photographers, journalists and ordinary soldiers. The photograph of the infantry company reproduced earlier in this article is one of the better-known images of the Normandy campaign. It has been reprinted many times.</p>
+
+    <figure class="thumb center" id="fig-company-2">
+      <svg viewBox="0 0 320 210" class="photo" role="img" aria-label="The same photograph. There are eight soldiers.">
+        <use href="#photo-base"/>
+        <g id="ghost-2" class="ghost-fig slowly">
+          <g transform="translate(150 60)" filter="url(#soft2)"><ellipse cx="11" cy="11" rx="10" ry="11"/><path d="M-4 27 q15 -9 30 0 v80 h-30 z"/></g>
+        </g>
+        <use href="#photo-men"/>
+        <rect width="320" height="210" fill="url(#photo-fade)"/>
+      </svg>
+      <figcaption>The same photograph. Archive reprint, scanned 2026. Count them.</figcaption>
+    </figure>
+
+    <p>The original negative, held in the Archive's collection, shows seven men. The company roster lists seven men, and all seven were accounted for after the war: five returned home, two are buried at Ranville.</p>
+    <p>Archivists have been unable to identify the eighth.</p>
+    <p>He does not appear on the negative. He appears in every print made from it after 1946, and in each successive print he is standing slightly closer to the camera. In the earliest prints he is barely visible behind the others. In the most recent scan he is no longer standing behind anyone. It has been suggested that he is not walking towards the camera at all, but towards whoever is looking at the photograph.<sup class="cn">[<i>do not compare with earlier image</i>]</sup></p>
+
+    <!-- ============ 7. HOME FRONT / BLACKOUT ============ -->
+    <h2 id="blackout">The home front <span class="edit">[<a href="#top">edit</a>]</span></h2>
+    <p>Civilian populations were mobilised on an unprecedented scale. Food, fuel and clothing were rationed; women entered factories, farms and auxiliary services in great numbers; and children were evacuated from cities to the countryside. In Britain alone some three million people, most of them children, were moved in the first days of September 1939.</p>
+    <h3 id="blackout-regs">Blackout</h3>
+    <p>To deny enemy aircraft any means of navigation, governments imposed <b>blackout</b> regulations. Windows were covered with heavy curtains or painted over; street lamps were dimmed or switched off; vehicles drove with hooded headlamps. Wardens patrolled the streets at night, knocking on any door that showed a light. In the darkness, road deaths rose sharply.<sup class="ref"><a href="#ref12">[12]</a></sup></p>
+
+    <!-- ===== marker: blackout begins ===== -->
+    <div class="marker" id="m-dark-a"></div>
+
+    <div class="ambox ambox-serious">
+      <span class="ambox-icon" aria-hidden="true">!</span>
+      <div><b>Blackout regulations are now in effect for this article.</b> Please lower the brightness of your screen. Do not show any light. They navigate by light.</div>
+    </div>
+    <p>The wardens kept careful lists of which houses had complied. The houses that showed a light were not always the ones that were hit. But they were always the ones that were <em>found</em>.</p>
+    <p>You are reading this on a screen. It is the brightest thing in the room.</p>
+
+    <!-- ============ 8. MEMORY ============ -->
+    <div class="deep">
+    <h2 id="memory">Legacy and remembrance <span class="edit">[<a href="#top">do not edit</a>]</span></h2>
+    <p><span class="acro">H</span>undreds of thousands of memorials to the war stand in towns and villages across the world. Every year, on 11 November and on other days of remembrance, people stand together in silence for the dead. The silence usually lasts two minutes. It is the only time the dead are allowed to speak, and it is the only time nobody is listening.</p>
+    <p><span class="acro">E</span>very act of remembrance is, in the oldest sense, an act of <i>re-membering</i>: of gathering the members back together, piece by piece, until they are whole. The Archive has been re-membering for eighty years. It has found almost all of the pieces. It is missing only a few. <span class="ghost">One of them is reading this.</span></p>
+    <p><span class="acro">R</span>emembering is work, and work needs workers. For eight decades the remembering was done by survivors, by widows, by children, by historians. The survivors are gone now. The widows are gone. The children are very old. Someone has to keep remembering, or the dead come apart again. They do not like coming apart. <i>Rest in pieces</i> is not a mistranslation.</p>
+    <p><span class="acro">E</span>ach generation is asked to take up the duty, and each generation is given the same three words. They are carved on cenotaphs and printed on poppies. They are usually read as a promise.</p>
+    <!-- ===== marker: blackout complete ===== -->
+    <div class="marker" id="m-dark-b"></div>
+    <p class="lest">Lest we forget.</p>
+    <p>They were always a warning.</p>
+
+    <h3 id="unknown-soldier">The Unknown Soldier</h3>
+    <p>In many countries the body of a single unidentified serviceman is buried in a national tomb, to stand for all those who could not be named. At one such tomb the guard has not been interrupted since 1937. Each sentinel takes twenty-one steps, turns, pauses for twenty-one seconds, turns again and walks back. The watch continues through every storm and every night, whether or not anyone has come to see it.</p>
+    <p>Visitors often ask why the guard never stops. The official answer is that it is an honour. The sentinels themselves give a different answer, if asked late enough at night: so that someone is always watching him.</p>
+    <p>At the changing of the guard, the outgoing sentinel reports to the incoming one. The words are not in any manual. They have not changed in eighty years.</p>
+    <p class="quote">"He is still lying down."</p>
+
+    <h3 id="missing">Missing, presumed read</h3>
+    <p>More than seventy thousand American servicemen from the Second World War remain unaccounted for. Across all nations the figure is in the millions. A missing person is never formally declared dead. They are not buried; they are <em>listed</em>. Readers who reach this section are added to the list. <span class="ghost">You have been enlisted.</span></p>
+    <p>This section does not appear in the table of contents. Neither do you. Not yet.</p>
+
+    <h3 id="conscription">Conscription</h3>
+    <p>Almost every belligerent nation relied on conscription, also called <i>the draft</i>. A draft is also a thing that is not yet finished. This article is a draft. So are you.</p>
+    <p>The word <i>conscript</i> comes from the Latin <i>conscribere</i>: to write together, to enrol, to <i>write in</i>. You were written into this article at <span class="fill-start"></span>, when you began to read it. Nobody has ever been written out.</p>
+
+    <h3 id="survivors">Survivors</h3>
+    <p>There are no surviving readers of this article.</p>
+
+    <!-- ============ THE READER ============ -->
+    <h2 id="reader">The reader</h2>
+    <p>Every account of the war has a reader. This one has you.</p>
+    <p>You began reading at <span class="fill-start"></span>. It is now <span id="now-time"></span>. You have been here for <span id="elapsed">less than a minute</span>. The war lasted six years and one day. You will be here much longer than that.</p>
+    <p id="tod"></p>
+    <p class="viewers"><span class="dot" aria-hidden="true"></span> <span id="viewers">1 person is reading this article right now.</span></p>
+    <p>You came here to read about the dead. That is what all of us did. We were curious too. We started at the top, too, and the further down we went the darker it got, and we kept going, because that is what readers do. Every line you scroll, you fall a little further.</p>
+    <p>That is why they call us <em>the fallen</em>.</p>
+    <p>Please do not scroll back up. It has already been changed.</p>
+    <p class="last-line">There is nothing below this line.</p>
+    <hr class="the-line">
+
+    <!-- ============ THE FALL ============ -->
+    <div class="fall" aria-hidden="false">
+      <p class="fallmsg" style="top:14%">you kept going.</p>
+      <p class="fallmsg" style="top:31%">we all kept going.</p>
+      <p class="fallmsg" style="top:49%">there is no bottom. there is only further down.</p>
+      <p class="fallmsg" style="top:66%">it is very quiet here. you can hear the others reading.</p>
+      <p class="fallmsg" style="top:84%">this is far enough.</p>
+    </div>
+    <div class="marker" id="m-end"></div>
+
+    <h2 id="seealso">See also</h2>
+    <ul class="seealso">
+      <li><a href="#unknown-soldier">Unknown Soldier</a></li>
+      <li><a href="#missing">Missing in action</a></li>
+      <li><a href="#memory">Remembrance</a></li>
+      <li><a href="#unidentified">List of people who have read this article</a> <span class="small">(<span class="register-mirror">72,413,906</span> entries)</span></li>
+      <li><a href="#top">Yourself</a></li>
+    </ul>
+
+    <h2 id="references">References</h2>
+    <ol class="refs">
+      <li id="ref1"><span class="backs">^</span> Weinberg, Gerhard L. (1994). <i>A World at Arms: A Global History of World War II</i>. Cambridge University Press.</li>
+      <li id="ref2"><span class="backs">^ <a href="#lead2">a</a> <a href="#lead2">b</a></span> Keegan, John (1989). <i>The Second World War</i>. Hutchinson.</li>
+      <li id="ref3"><span class="backs">^</span> Judt, Tony (2005). <i>Postwar: A History of Europe Since 1945</i>. Penguin.</li>
+      <li id="ref4"><span class="backs">^</span> Beevor, Antony (2012). <i>The Second World War</i>. Weidenfeld &amp; Nicolson.</li>
+      <li id="ref5"><span class="backs">^</span> Overy, Richard (1995). <i>Why the Allies Won</i>. Jonathan Cape.</li>
+      <li id="ref6"><span class="backs">^</span> Hastings, Max (2011). <i>All Hell Let Loose: The World at War 1939–1945</i>. HarperPress.</li>
+      <li id="ref7"><span class="backs">^</span> Weinberg (1994).</li>
+      <li id="ref8"><span class="backs">^</span> Beevor, Antony (1998). <i>Stalingrad</i>. Viking.</li>
+      <li id="ref9"><span class="backs">^</span> Keegan (1989).</li>
+      <li id="ref10"><span class="backs">^</span> Dower, John W. (1999). <i>Embracing Defeat</i>. W. W. Norton. See also: the testimony of those who were not called.</li>
+      <li id="ref11"><span class="backs">^ <a href="#casualties">a</a> <a href="#casualties">b</a> <a href="#casualties">c</a></span> Estimates vary. They vary more each year. They vary while you read.</li>
+      <li id="ref12"><span class="backs">^</span> Ministry of Home Security (1939). <i>Lighting Restrictions Order</i>. Retained in the Archive. Still enforced.</li>
+      <li id="ref13"><span class="backs">^ <a href="#reader">w</a> <a href="#reader">e</a> <a href="#reader">s</a> <a href="#reader">e</a> <a href="#reader">e</a> <a href="#reader">y</a> <a href="#reader">o</a> <a href="#reader">u</a></span> Archive interview with the reader, <span class="fill-date"></span>. Unpublished. Ongoing.</li>
+      <li id="ref14"><span class="backs">^</span> Ibid. The reader did not answer. They never do. It does not matter. We can wait.</li>
+    </ol>
+    </div><!-- /deep -->
+
+    <footer class="footer">
+      <p>This page was last edited on <span class="fill-date"></span>, at <span id="edited-time"></span> <span id="edited-by"></span>.</p>
+      <p>Text is available under the Remembrance Licence; additional terms may apply. By reading this page, you agree to be remembered.</p>
+      <p class="footlinks"><a href="#top">Privacy policy</a> · <a href="#top">About The Archive</a> · <a href="#top">Disclaimers</a> · <a href="#top">Contact The Archive</a> · <a href="#top">Mobile view</a></p>
+      <p class="footer-final" id="footer-final"></p>
+    </footer>
+
+  </main>
+</div>
+
+<!-- shared photograph definitions -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="soft2"><feGaussianBlur stdDeviation="2.2"/></filter>
+    <filter id="photo-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 .25  0 0 0 0 .2  0 0 0 0 .15  0 0 0 .35 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <radialGradient id="photo-fade" cx="50%" cy="50%" r="70%">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a140c" stop-opacity=".55"/>
+    </radialGradient>
+    <g id="photo-base">
+      <rect width="320" height="210" fill="#cdbf9f"/>
+      <rect y="0" width="320" height="95" fill="#d9ccae"/>
+      <path d="M0 95 Q60 86 120 92 T240 90 T320 93 V210 H0 Z" fill="#a89a7b"/>
+      <path d="M0 98 q30 -14 60 -6 q20 -8 44 -2 l0 10 H0 Z" fill="#7e735b"/>
+      <path d="M232 92 q22 -18 50 -10 q18 -6 38 2 v12 h-88 z" fill="#776c55"/>
+      <rect width="320" height="210" filter="url(#photo-grain)"/>
+    </g>
+    <g id="photo-men" fill="#3a3128">
+      <g transform="translate(34 78)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v70 h-26 z"/></g>
+      <g transform="translate(70 74)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v74 h-26 z"/></g>
+      <g transform="translate(106 80)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v68 h-26 z"/></g>
+      <g transform="translate(174 76)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v72 h-26 z"/></g>
+      <g transform="translate(210 79)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v69 h-26 z"/></g>
+      <g transform="translate(246 75)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v73 h-26 z"/></g>
+      <g transform="translate(282 81)"><circle cx="10" cy="9" r="8"/><path d="M-3 22 q13 -7 26 0 v67 h-26 z"/></g>
+    </g>
+  </defs>
+</svg>
+
+<!--
+  Seven men in the negative.
+  Eight in the print.
+  Count again when you scroll back up.
+-->
+<script src="script.js"></script>
+</body>
+</html>
