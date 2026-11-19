@@ -186,6 +186,9 @@
     const cap = $('#ib-caption');
     if (cap.hasAttribute('data-swap')) cap.textContent = 'A B-17 Flying Fortress crew of the 385th Bombardment Group, England, 1943';
   }
+  const cem = $('#fig-cemetery img');
+  const hideCem = () => { $('#fig-cemetery').hidden = true; measure(); };
+  if (cem.complete && cem.naturalWidth === 0) hideCem(); else cem.addEventListener('error', hideCem, { once: true });
   $$('.collage img').forEach(img => {
     if (img.complete && img.naturalWidth === 0) collageFallback();
     else img.addEventListener('error', collageFallback, { once: true });
