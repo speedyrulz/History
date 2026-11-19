@@ -79,7 +79,7 @@
   /* ---------- scroll geometry ---------- */
   const M = {};
   function measure() {
-    for (const id of ['m-age-a', 'm-age-b', 'm-dark-a', 'm-dark-b', 'm-end']) {
+    for (const id of ['m-age-a', 'm-age-b', 'm-dark-a', 'm-dark-b', 'm-fall-a', 'm-end']) {
       M[id] = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
     }
   }
@@ -112,6 +112,8 @@
       }
     }
   }
+
+  const emit = (name, detail) => document.dispatchEvent(new CustomEvent(name, { detail }));
 
   /* ---------- favicon ---------- */
   const eyeIcon = "data:image/svg+xml," + encodeURIComponent(
@@ -164,6 +166,13 @@
 
     baseTitle = titleFor();
     if (!S.hidden) document.title = baseTitle;
+
+    // tell the sound where you are
+    const H = document.documentElement.scrollHeight - window.innerHeight;
+    emit('archive:progress', {
+      age: S.age, dark: S.dark, fall: seg('m-fall-a', 'm-end'), ended: S.ended,
+      page: H > 0 ? window.scrollY / H : 0,
+    });
   }
 
   let ticking = false;
@@ -295,6 +304,7 @@
         v.textContent = '2 people are reading this article right now.';
         v.classList.remove('fading');
         startOtherCursor();
+        emit('archive:viewers');
       }, 2600);
     }
   }, 500);
@@ -357,13 +367,16 @@
         if (Math.random() < 0.035 && /[a-z]/.test(line[i])) {
           text += 'qwertyuiopasdfghjklzxcvbnm'[Math.floor(Math.random() * 26)];
           typed.textContent = text;
+          emit('archive:key');
           await sleep(180 + Math.random() * 200);
           text = text.slice(0, -1);
           typed.textContent = text;
+          emit('archive:key');
           await sleep(140);
         }
         text += line[i];
         typed.textContent = text;
+        if (line[i] !== ' ') emit('archive:key');
         const c = line[i];
         await sleep(c === '.' || c === ',' ? 420 + Math.random() * 400 : 55 + Math.random() * 120);
       }
@@ -410,6 +423,7 @@
 
   /* ---------- looking away ---------- */
   document.addEventListener('visibilitychange', () => {
+    emit('archive:hidden', document.hidden);
     if (document.hidden) {
       S.hidden = true;
       if (S.dark > 0.5) {
@@ -422,6 +436,7 @@
       document.title = baseTitle;
       if (S.typingDone && !S.heMoved) {
         S.heMoved = true;
+        emit('archive:moved');
         // nothing jumps. it is just a sentence, fading in, and it stays a while.
         setTimeout(() => say('he moved.', 9000), 1200);
         phases.add('after'); // and the top of the page is ready for you, whenever you go back

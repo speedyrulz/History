@@ -17,6 +17,7 @@
 <div id="grain" aria-hidden="true"></div>
 <div id="vignette" aria-hidden="true"></div>
 <div id="whisper" aria-live="polite"></div>
+<button id="sound-toggle" type="button" hidden aria-label="Mute sound" title="Mute"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z" fill="currentColor"/><path class="waves" d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path class="cross" d="M16 9l6 6M22 9l-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
 <svg id="other-cursor" viewBox="0 0 16 24" aria-hidden="true"><path d="M1 1 L1 19 L5.5 14.8 L8.6 22 L11.4 20.8 L8.4 13.8 L14.5 13.6 Z" fill="#000" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg>
 
 <header class="topbar">
@@ -101,6 +102,20 @@
 
     <div class="hatnote" id="hatnote" data-swap="after" data-html="&quot;World War II&quot; redirects here. It no longer needs to.">
       "Second World War" and "WWII" redirect here. For other uses, see <a href="#top">Second World War (disambiguation)</a>.<span id="welcome-back"></span>
+    </div>
+
+    <!-- ============ SPOKEN ARTICLE ============ -->
+    <div class="listen" id="listen">
+      <div class="listen-head">
+        <svg class="listen-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <b>Listen to this article</b>
+      </div>
+      <div class="listen-player">
+        <button id="listen-btn" type="button" aria-label="Play" aria-pressed="false">&#9654;</button>
+        <div class="listen-track"><div class="listen-bar" id="listen-bar"></div></div>
+        <span class="listen-time" id="listen-time">0:00 / 23:41</span>
+      </div>
+      <div class="listen-note" id="listen-note" data-swap="after" data-html="This audio file was recorded on {date}, at {start}. It is still recording.">This audio file was created from a revision of this article dated 2 September 1945, and does not reflect subsequent edits. <span class="small">Best heard with headphones.</span></div>
     </div>
 
     <!-- ============ INFOBOX ============ -->
@@ -358,6 +373,7 @@
     <hr class="the-line">
 
     <!-- ============ THE FALL ============ -->
+    <div class="marker" id="m-fall-a"></div>
     <div class="fall" aria-hidden="false">
       <p class="fallmsg" style="top:14%">you kept going.</p>
       <p class="fallmsg" style="top:31%">we all kept going.</p>
@@ -411,6 +427,7 @@
   Seven in the print.
   Count again when you scroll back up.
 -->
+<script src="sound.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
