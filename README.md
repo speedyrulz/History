@@ -24,4 +24,4 @@ Real historical content in the early sections is written to be accurate. The hor
 
 ## Photo credits
 
-All photographs are public-domain works from Wikimedia Commons; see [`img/CREDITS.md`](img/CREDITS.md). The extra figure in the crew photograph is a digital composite made for this page and does not appear in the original. The captions in the later sections are fiction.
+The photographs come from a public-domain 1943 US Army Air Forces photo on Wikimedia Commons; see [`img/CREDITS.md`](img/CREDITS.md). The extra figure in the crew photograph is a digital composite made for this page and does not appear in the original. The captions in the later sections are fiction.

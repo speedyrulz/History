@@ -193,10 +193,8 @@ sup.cn i { font-style: italic; }
 .thumb figcaption { padding: 5px 3px 2px; }
 
 /* real photographs: aged with the page */
-.collage { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
-.collage img, .photo-stack img { display: block; width: 100%; height: auto; }
-.collage img { aspect-ratio: 4 / 3; object-fit: cover; }
-.collage img, .photo-stack img:first-child, .thumb > img {
+.photo-stack img { display: block; width: 100%; height: auto; }
+.photo-stack img:first-child, .thumb > img {
   filter: sepia(calc(var(--age) * .55)) contrast(calc(1 + var(--dark) * .15)) brightness(calc(1 - var(--dark) * .25));
 }
 .thumb > img { display: block; width: 100%; height: auto; }

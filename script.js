@@ -178,22 +178,6 @@
   $$('img').forEach(img => img.addEventListener('load', () => { measure(); update(); }));
   measure(); update();
 
-  // if a collage photograph is missing, show the crew instead of a broken image
-  function collageFallback() {
-    const box = $('#ib-photo .collage');
-    if (!box) return;
-    box.outerHTML = '<div class="photo-stack"><img src="img/crew.jpg" alt="A B-17 bomber crew, England, 1943" width="960" height="707"></div>';
-    const cap = $('#ib-caption');
-    if (cap.hasAttribute('data-swap')) cap.textContent = 'A B-17 Flying Fortress crew of the 385th Bombardment Group, England, 1943';
-  }
-  const cem = $('#fig-cemetery img');
-  const hideCem = () => { $('#fig-cemetery').hidden = true; measure(); };
-  if (cem.complete && cem.naturalWidth === 0) hideCem(); else cem.addEventListener('error', hideCem, { once: true });
-  $$('.collage img').forEach(img => {
-    if (img.complete && img.naturalWidth === 0) collageFallback();
-    else img.addEventListener('error', collageFallback, { once: true });
-  });
-
   /* ---------- slow reveals ---------- */
   const io = new IntersectionObserver(entries => {
     for (const e of entries) {
